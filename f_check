@@ -82,6 +82,10 @@ else
                 vendor=FUJITSU
                 openmp='-Kopenmp'
                 ;;
+	    *Hewlett*)
+		vendor=CRAY
+		openmp='-fopenmp'
+		;;		
             *GNU*|*GCC*)
 
                 v="${data#*GCC: *\) }"
@@ -98,7 +102,7 @@ else
                             vendor=FLANG
                             openmp='-fopenmp'
                             ;;
-                        *ifx*)
+                        *ifort*|*ifx*)
                             vendor=INTEL
                             openmp='-fopenmp'
                             ;;
